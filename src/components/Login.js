@@ -1,24 +1,34 @@
 import '../login.css';
 import {useState} from "react";
 import axios from "axios";
-import {statusCode} from "../configEnv";
+import {HOST, statusCode} from "../configEnv";
 import tpLogo from '../img/icon-tp-web.webp';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Login(){
     const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
 
+    const customOK = "custom-id-success"; //prevent toastr duplicate
+    const customERR = "custom-id-error"; //prevent toastr duplicate
+
     function handleLogin(e) {
         e.preventDefault()
-        axios.post(`http://localhost:8000/api/get-token`, {
+        axios.post(`${HOST}/api/get-token`, {
             username: userName,
             password: password
         })
             .then(res => {
                 if(res.data.code === statusCode.OK){
-                    console.log('ok')
+                    toast.success(res.data.msg, {
+                        toastId: customOK
+                    })
                 } else{
-                    console.log('err')
+                    toast.error(res.data.msg, {
+                        toastId: customERR
+                    })
                 }
             })
             // .catch(error => console.log('this is err: ',error));
@@ -26,6 +36,7 @@ function Login(){
 
     return (
         <div className="container">
+            <ToastContainer />
             <div className="screen">
                 <div className="screen__content">
                     <form className="login" onSubmit={handleLogin}>
