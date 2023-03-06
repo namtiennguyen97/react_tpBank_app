@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    background-image: linear-gradient(to right top, #461449, #f5ddff);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    height:200px;
+    width:350px;
+    background-image: linear-gradient(to right top, #79177e, #320038);
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+}
+
+.card .circle{
+    position:absolute;
+    height:150px;
+    width:150px;
+    background-color:#fff;
+    border-radius:50%;
+    opacity:0.1;
+    top:-60px;
+    right:-60px;
+    transition:all 0.5s;
+
+}
+
+.card:hover .circle{
+    height:200px;
+    width:200px;
+}
+
+.top-div{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+}
+
+.chip-image{
+    padding:15px;
+}
+
+.chip-image img{
+    width:30px;
+}
+
+.plus-sign{
+    position:absolute;
+    top:0px;
+    right:70px;
+
+}
+
+
+.plus-sign::before{
+    content:'';
+    position:absolute;
+    height:10px;
+    width:10px;
+    background-color:#fff;
+    top:25px;
+    left:31px;
+    transform:rotate(45deg);
+
+}
+
+.plus-sign span:nth-child(1){
+    position:absolute;
+    height:70px;
+    width:2px;
+    left:35px;
+    background-color:#fff;
+}
+.plus-sign span:nth-child(2){
+    position:absolute;
+    height:2px;
+    width:70px;
+    top:30px;
+    background-color:#fff;
+}
+
+.card-details{
+    padding:0 12px;
+    margin-top:25px;
+}
+
+.card-number{
+    font-size:20px;
+    color:#fff;
+}
+
+.card-number span{
+    padding:0px 4px;
+}
+
+.card-details .date{
+    padding:0px 4px;
+    color:#BDC3CB;
+    font-size:13px;
+
+}
+
+
+.ownername {
+    color:#fff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+    padding:0px 20px;
+
+
+}
+
+.ownername span{
+
+    font-size:13px;
+    text-transform:uppercase;
+}
+
+.ownername img{
+
+    width:30px;
+}
+.tp-txt{
+    color: #f57d29;
+}
