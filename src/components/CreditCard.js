@@ -1,6 +1,6 @@
 import {memo} from "react";
 import chipIcon from '../img/chipicon.png'
-import '../card.css';
+import '../css/card.css';
 function CreditCard (){
     return (
         <div className="container">
@@ -33,7 +33,6 @@ function CreditCard (){
 
                         <span>john smith</span>
                         <img src="https://imgur.com/KpIC2Cs.png" />
-
                     </div>
                 </div>
             </div>

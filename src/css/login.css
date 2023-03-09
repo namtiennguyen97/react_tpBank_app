@@ -1,27 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: Raleway, sans-serif;
-}
-
-body {
-    /*background: linear-gradient(90deg, #c7c5f4, #9d6bcc);*/
-    background-image: url("img/login-tp-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
 .screen {
     background: linear-gradient(90deg, #79177e, #af22b6);
     position: relative;
