@@ -129,3 +129,19 @@
     border-radius: 5px;
     box-shadow: 0px 0px 24px #5c5696;
 }
+.action-board{
+    display: flex;
+    width: 100%;
+    padding: 5px;
+}
+.action-btn{
+    width: calc(100% /3);
+    margin: 5px;
+    height: 3rem;
+}
+.setting-icon{
+    transition: transform .7s ease-in-out;
+}
+.action-btn:hover .setting-icon{
+    transform: rotate(360deg);
+}
